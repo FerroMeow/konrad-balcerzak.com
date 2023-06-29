@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply bg-stone-500 px-4 py-2 w-fit inline-block text-white rounded-md hover:bg-stone-600 motion-safe:transition-all;
+    }
+}
