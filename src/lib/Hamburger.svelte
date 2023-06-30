@@ -1,8 +1,9 @@
 <script lang="ts">
+	export let expanded: boolean;
 	export let className: string | null = null;
 </script>
 
-<button class={className}>
+<button class={className} on:click>
 	<svg
 		aria-hidden="true"
 		class="h-9 w-9 fill-current stroke-none"
