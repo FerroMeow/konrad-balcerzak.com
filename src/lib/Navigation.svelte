@@ -1,7 +1,7 @@
 <script lang="ts">
+	import AppRoutes from './types/AppRoutes';
 	import Hamburger from './Hamburger.svelte';
 	import NavLink from './NavLink.svelte';
-	import AppRoutes from './AppRoutes';
 	let expanded = false;
 </script>
 
