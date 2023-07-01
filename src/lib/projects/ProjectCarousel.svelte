@@ -36,6 +36,12 @@
 			left: changeAmount
 		});
 	};
+
+	const onCardWheel = (e: WheelEvent): void => {
+		console.debug('wheel!', e);
+		e.preventDefault();
+		e.deltaY > 0 ? onScrollBtn(Direction.Right) : onScrollBtn(Direction.Left);
+	};
 </script>
 
 <div class="relative">
@@ -46,7 +52,7 @@
 	>
 		<CarouselPadding />
 		{#each projects as project}
-			<Card data={project} />
+			<Card data={project} on:wheel={onCardWheel} />
 		{/each}
 		<CarouselPadding />
 	</div>

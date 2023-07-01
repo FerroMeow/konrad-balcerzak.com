@@ -20,7 +20,7 @@
 	</div>
 </div>
 <nav
-	class="bg-stone-300/50 backdrop-blur-sm text-stone-800 fixed left-0 bottom-0 top-16 w-full transition-all md:max-w-sm"
+	class="bg-stone-800/50 backdrop-blur-sm text-stone-800 fixed left-0 bottom-0 top-16 w-full transition-all md:max-w-sm"
 	class:translate-x-[-100%]={!expanded}
 	class:translate-x-0={expanded}
 >
