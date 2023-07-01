@@ -5,7 +5,7 @@
 	$: activeGroupHover = isActive ? '' : 'group-hover:';
 </script>
 
-<li class="{isActive ? 'text-blue-700 text-lg' : ''} group transition-all">
+<li class="{isActive ? 'text-slate-500 text-lg' : ''} group transition-all">
 	<a
 		{href}
 		class="p-4 block before:inline-block before:content-['>_'] {isActive

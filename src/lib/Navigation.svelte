@@ -5,8 +5,8 @@
 	let expanded = false;
 </script>
 
-<div class="h-16 fixed w-full p-4 flex items-center shadow-md bg-stone-300/50 after:clear-left">
-	<div class="container mx-auto">
+<div class="h-16 fixed w-full p-4 shadow-md bg-stone-300/50 backdrop-blur-lg after:clear-left">
+	<div class="xl:container mx-auto flex items-center">
 		<Hamburger
 			className="float-left w-0"
 			on:click={() => {
