@@ -26,7 +26,7 @@
 </script>
 
 <header
-	class="h-[theme(space.header)] top-0 md:sticky w-full p-4 shadow-xl bg-slate-600/80 backdrop-blur-md text-stone-200"
+	class="h-[theme(space.header)] top-0 md:sticky w-full p-4 shadow-xl bg-slate-600/80 backdrop-blur-md text-stone-200 z-10"
 	class:max-md:sticky={expanded}
 	class:max-md:static={!expanded}
 >

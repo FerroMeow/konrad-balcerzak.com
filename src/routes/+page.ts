@@ -1,4 +1,4 @@
-import type { Project } from "$lib/types/cardData"
+import type { Project } from "$lib/projects/CardData"
 import type { PageLoad } from "./$types"
 export const load = ((): {
     projects: Project[]

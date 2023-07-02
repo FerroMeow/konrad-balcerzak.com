@@ -1,15 +1,19 @@
-<script>
+<script lang="ts">
+	import CardContent from '$lib/ContentCard.svelte';
 	import Heading from '$lib/Heading.svelte';
+	import SkillGrid from '$lib/skills/SkillGrid.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
 </script>
 
 <Heading level={2} className="max-w-3xl px-8 my-12 mx-auto text-4xl md:text-4xl">About</Heading>
 
 <div class="px-4">
-	<div class="mx-auto border border-slate-200 rounded-3xl shadow-lg md:max-w-3xl">
+	<header class="mx-auto border border-slate-200 rounded-3xl shadow-lg max-w-3xl">
 		<div
 			class="h-40 p-16 pb-0 rounded-t-3xl bg-gradient-to-l from-pink-500 via-purple-500 to-emerald-500"
 		/>
-		<div class="p-6 pt-12 rounded-b-3xl relative bg-stone-100 md:flex md:justify-between">
+		<div class="p-8 pt-12 rounded-b-3xl relative bg-stone-100 md:flex md:justify-between">
 			<img
 				class="absolute -top-32 max-md:left-1/2 -translate-x-1/2 w-40 aspect-square bg-inherit rounded-full border-8 border-stone-200 md:translate-x-0 object-cover"
 				src="/images/personal/face.jpg"
@@ -41,5 +45,10 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+	</header>
+	<CardContent title="My skills">
+		<SkillGrid skills={data.skills} />
+	</CardContent>
+	<CardContent title="My story" />
+	<CardContent title="My favorite music" />
 </div>

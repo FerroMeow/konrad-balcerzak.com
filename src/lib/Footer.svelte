@@ -26,12 +26,14 @@
 				<ul class="flex gap-4 justify-center">
 					<li>
 						<a href="https://github.com/konradBalcerzak/" target="_blank">
-							<img src="" alt="GitHub" />
+							<i class="fa-brands fa-github" />
+							GitHub
 						</a>
 					</li>
 					<li>
 						<a href="https://www.linkedin.com/in/konrad-balcerzak/" target="_blank">
-							<img src="" alt="Linkedin" />
+							<i class="fa-brands fa-linkedin" />
+							Linkedin
 						</a>
 					</li>
 				</ul>
