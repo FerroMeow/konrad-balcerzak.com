@@ -1,15 +1,15 @@
 <script>
 	import FooterLink from './FooterLink.svelte';
-	import AppRoute from './navigation/AppRoute';
+	import { AppRoute, appRoutes } from './navigation/AppRoute';
 </script>
 
 <div class="bg-stone-800 text-stone-300 min-h-[theme(space.32)] p-8 text-center">
 	<footer class="container mx-auto">
 		<nav>
 			<ul class="flex gap-8 text-xl justify-center md:justify-start">
-				<FooterLink href={AppRoute.Homepage}>Home</FooterLink>
-				<FooterLink href={AppRoute.About}>About</FooterLink>
-				<FooterLink href={AppRoute.Contact}>Contact</FooterLink>
+				{#each appRoutes as appRoute}
+					<FooterLink href={appRoute[0]}>{appRoute[1]}</FooterLink>
+				{/each}
 			</ul>
 		</nav>
 		<div class="h-[2px] bg-slate-600 mt-6 mb-4" />

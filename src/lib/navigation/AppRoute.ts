@@ -3,4 +3,9 @@ export enum AppRoute {
     About = '/about',
     Contact = '/contact',
 }
-export default AppRoute;
+
+export const appRoutes: Map<AppRoute, string> = new Map([
+    [AppRoute.Homepage, 'Home'],
+    [AppRoute.About, 'About'],
+    [AppRoute.Contact, 'Contact'],
+]);

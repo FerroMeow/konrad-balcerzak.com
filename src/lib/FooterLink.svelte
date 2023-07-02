@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AppRoute from './navigation/AppRoute';
+	import { AppRoute } from './navigation/AppRoute';
 
 	export let href: AppRoute | URL = AppRoute.Homepage;
 </script>

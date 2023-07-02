@@ -3,7 +3,11 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			space: {
+				header: '6rem',
+			}
+		}
 	},
 
 	plugins: []
