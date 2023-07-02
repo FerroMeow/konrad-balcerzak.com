@@ -3,10 +3,10 @@
 	import AppRoute from './types/AppRoute';
 </script>
 
-<div class="bg-stone-800 text-stone-300 min-h-[theme(space.32)] p-8">
+<div class="bg-stone-800 text-stone-300 min-h-[theme(space.32)] p-8 text-center">
 	<footer class="container mx-auto">
 		<nav>
-			<ul class="flex gap-8 text-xl">
+			<ul class="flex gap-8 text-xl justify-center md:justify-start">
 				<FooterLink href={AppRoute.Homepage}>Home</FooterLink>
 				<FooterLink href={AppRoute.About}>About</FooterLink>
 				<FooterLink href={AppRoute.Contact}>Contact</FooterLink>
@@ -25,12 +25,12 @@
 				<h6 class="text-stone-400">Find me on</h6>
 				<ul class="flex gap-4 justify-center">
 					<li>
-						<a href="https://github.com/konradBalcerzak/">
+						<a href="https://github.com/konradBalcerzak/" target="_blank">
 							<img src="" alt="GitHub" />
 						</a>
 					</li>
 					<li>
-						<a href="https://www.linkedin.com/in/konrad-balcerzak/">
+						<a href="https://www.linkedin.com/in/konrad-balcerzak/" target="_blank">
 							<img src="" alt="Linkedin" />
 						</a>
 					</li>
@@ -39,6 +39,6 @@
 		</div>
 	</footer>
 </div>
-<div class="bg-stone-950 p-2 text-center text-stone-300">
-	Copyright &copy; Konrad Balcerzak 2023
+<div class="bg-stone-950 p-2 text-center md:text-right text-stone-300">
+	Copyright &copy; Konrad Balcerzak {new Date().getFullYear().toString()}
 </div>
