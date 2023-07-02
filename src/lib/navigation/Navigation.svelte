@@ -24,7 +24,7 @@
 </script>
 
 <div
-	class="h-16 top-0 md:sticky w-full p-4 shadow-md bg-slate-400/90 backdrop-blur-lg after:clear-left text-stone-200"
+	class="h-16 top-0 md:sticky w-full p-4 shadow-xl bg-slate-600/80 backdrop-blur-md after:clear-left text-stone-200"
 	class:max-md:sticky={expanded}
 	class:max-md:static={!expanded}
 >
