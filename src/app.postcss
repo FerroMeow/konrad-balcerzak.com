@@ -11,7 +11,11 @@
 		@apply bg-slate-500 px-4 py-2 w-fit inline-block text-white rounded-md hover:bg-slate-600 motion-safe:transition-all;
 	}
 }
-
-@tailwind components;
-
-@tailwind utilities;
+@layer utilities {
+	.h-screen-nav {
+		height: calc(100vh - theme(space.16));
+	}
+	.min-h-screen-nav {
+		min-height: calc(100vh - theme(space.16));
+	}
+}

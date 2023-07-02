@@ -13,7 +13,7 @@
 	Skip to main content
 </a>
 <Navigation />
-<main id="content">
+<main id="content" class="min-h-screen-nav">
 	<slot />
 </main>
 <Footer />

@@ -5,9 +5,7 @@
 	export let data: PageData;
 </script>
 
-<header
-	class="text-center h-[calc(100vh-theme(space.16))] flex flex-col justify-center bg-stone-200"
->
+<header class="text-center h-screen-nav flex flex-col justify-center bg-stone-200">
 	<h1 class="text-4xl md:text-7xl font-semibold text-slate-600">Konrad Balcerzak</h1>
 	<p class="text-lg md:text-4xl mt-4 md:mt-8 text-stone-700">A professional web developer</p>
 	<a href="/about" class="btn mx-auto mt-8 text-lg p-4">Find out more</a>
@@ -17,8 +15,9 @@
 		<Heading level={2}>Who am I?</Heading>
 		<div class="flex flex-col gap-8 md:gap-32 mt-16 text-2xl md:flex-row text-stone-800">
 			<p class="flex-1">
-				I am a full stack web developer from Poland. I started coding when I was 15, and over time,
-				I started working as a programmer. Over time, I learned many languages and technologies.
+				I am a full stack web developer from Poland. I began coding when I was 15, and, shortly
+				after, I started working as a programmer. Over time, I learned many languages and
+				technologies.
 			</p>
 			<p class="flex-1">
 				Currently, I am studying Information Technology for an engineering degree. During my
