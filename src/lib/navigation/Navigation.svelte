@@ -3,8 +3,14 @@
 	import Hamburger from './Hamburger.svelte';
 	import NavLink from './NavLink.svelte';
 	import { onMount } from 'svelte';
+
 	let expanded = false;
 	let toggleBodyClass: (expanded: boolean) => void;
+
+	const onNavClick = (e: MouseEvent): void => {
+		expanded = false;
+	};
+
 	onMount(() => {
 		toggleBodyClass = (expanded) => {
 			if (expanded) {
@@ -18,9 +24,9 @@
 </script>
 
 <div
-	class="h-16 md:fixed w-full p-4 shadow-md bg-slate-400/90 backdrop-blur-lg after:clear-left text-stone-300"
-	class:max-md:fixed={expanded}
-	class:max-md:absolute={!expanded}
+	class="h-16 top-0 md:sticky w-full p-4 shadow-md bg-slate-400/90 backdrop-blur-lg after:clear-left text-stone-200"
+	class:max-md:sticky={expanded}
+	class:max-md:static={!expanded}
 >
 	<div class="xl:container mx-auto flex items-center">
 		<Hamburger
@@ -41,8 +47,8 @@
 	class:translate-x-0={expanded}
 >
 	<ul class="divide-y divide-slate-500 divide-solid p-4">
-		<NavLink href={AppRoute.Homepage}>Home</NavLink>
-		<NavLink href={AppRoute.About}>About</NavLink>
-		<NavLink href={AppRoute.Contact}>Contact</NavLink>
+		<NavLink href={AppRoute.Homepage} on:click={onNavClick}>Home</NavLink>
+		<NavLink href={AppRoute.About} on:click={onNavClick}>About</NavLink>
+		<NavLink href={AppRoute.Contact} on:click={onNavClick}>Contact</NavLink>
 	</ul>
 </nav>
