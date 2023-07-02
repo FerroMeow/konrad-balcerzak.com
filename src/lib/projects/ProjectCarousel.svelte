@@ -38,14 +38,12 @@
 	};
 
 	const onCardWheel = (e: WheelEvent): void => {
-		console.debug('wheel!', e);
-		e.preventDefault();
 		e.deltaY > 0 ? onScrollBtn(Direction.Right) : onScrollBtn(Direction.Left);
 	};
 </script>
 
 <div class="relative">
-	<ScrollButton direction={Direction.Left} on:click={(e) => onScrollBtn(Direction.Left)} />
+	<ScrollButton direction={Direction.Left} on:click={() => onScrollBtn(Direction.Left)} />
 	<div
 		class="py-8 flex gap-8 overflow-x-auto touch-pan-x my-8 snap-x snap-mandatory"
 		use:scrollableAction
@@ -56,5 +54,5 @@
 		{/each}
 		<CarouselPadding />
 	</div>
-	<ScrollButton direction={Direction.Right} on:click={(e) => onScrollBtn(Direction.Right)} />
+	<ScrollButton direction={Direction.Right} on:click={() => onScrollBtn(Direction.Right)} />
 </div>

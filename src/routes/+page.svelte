@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '$lib/Footer.svelte';
 	import Heading from '$lib/Heading.svelte';
 	import ProjectCarousel from '$lib/projects/ProjectCarousel.svelte';
 	import type { Project } from '$lib/types/CardData';
@@ -6,11 +7,11 @@
 	export let data: PageData;
 </script>
 
-<section class="text-center h-screen flex flex-col justify-center bg-stone-200 snap-start">
+<header class="text-center h-screen flex flex-col justify-center bg-stone-200 snap-start">
 	<h1 class="text-4xl md:text-7xl font-semibold text-slate-600">Konrad Balcerzak</h1>
 	<p class="text-lg md:text-4xl mt-4 md:mt-8 text-stone-700">A professional web developer</p>
 	<a href="/about" class="btn mx-auto mt-8 text-lg p-4">Find out more</a>
-</section>
+</header>
 <div class="snap-start snap-always">
 	<div class="min-h-[22rem] p-8 bg-stone-400">
 		<section class="container mx-auto">
@@ -35,4 +36,5 @@
 			<ProjectCarousel projects={data.projects} />
 		</section>
 	</div>
+	<Footer />
 </div>

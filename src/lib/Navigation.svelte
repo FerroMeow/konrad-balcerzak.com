@@ -1,11 +1,13 @@
 <script lang="ts">
-	import AppRoutes from './types/AppRoutes';
+	import AppRoute from './types/AppRoute';
 	import Hamburger from './Hamburger.svelte';
 	import NavLink from './NavLink.svelte';
 	let expanded = false;
 </script>
 
-<div class="h-16 fixed w-full p-4 shadow-md bg-stone-300/50 backdrop-blur-lg after:clear-left">
+<div
+	class="h-16 fixed w-full p-4 shadow-md bg-slate-500/75 backdrop-blur-lg after:clear-left text-stone-300"
+>
 	<div class="xl:container mx-auto flex items-center">
 		<Hamburger
 			className="float-left w-0"
@@ -20,13 +22,13 @@
 	</div>
 </div>
 <nav
-	class="bg-stone-800/50 backdrop-blur-sm text-stone-800 fixed left-0 bottom-0 top-16 w-full transition-all md:max-w-sm"
+	class="bg-slate-800/75 backdrop-blur-sm text-stone-100 fixed left-0 bottom-0 top-16 w-full transition-all md:max-w-sm"
 	class:translate-x-[-100%]={!expanded}
 	class:translate-x-0={expanded}
 >
 	<ul class="divide-y divide-stone-300 divide-solid p-4">
-		<NavLink href={AppRoutes.Homepage}>Home</NavLink>
-		<NavLink href={AppRoutes.About}>About</NavLink>
-		<NavLink href={AppRoutes.Contact}>Contact</NavLink>
+		<NavLink href={AppRoute.Homepage}>Home</NavLink>
+		<NavLink href={AppRoute.About}>About</NavLink>
+		<NavLink href={AppRoute.Contact}>Contact</NavLink>
 	</ul>
 </nav>
