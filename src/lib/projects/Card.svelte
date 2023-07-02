@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type CardData from '$lib/types/CardData';
+	import type CardData from '$lib/projects/CardData';
 
 	export let data: CardData;
 	let background = data.imageFilename;

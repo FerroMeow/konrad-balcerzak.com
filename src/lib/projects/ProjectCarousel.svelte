@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Card from '$lib/Card.svelte';
-	import type Project from '$lib/types/CardData';
+	import Card from '$lib/projects/Card.svelte';
+	import type Project from '$lib/projects/CardData';
 	import CarouselPadding from './CarouselPadding.svelte';
 	import { onMount } from 'svelte';
 	import ScrollButton from './ScrollButton.svelte';
-	import { Direction } from '$lib/types/Direction';
+	import { ScrollDirection } from '$lib/types/Direction';
 	import type { Action } from 'svelte/action';
 
 	export let projects: Project[];
@@ -15,16 +15,16 @@
 		scrollableNode = node;
 	};
 
-	const onScrollBtn = (direction: Direction): void => {
+	const onScrollBtn = (direction: ScrollDirection): void => {
 		if (!scrollableNode) {
 			return;
 		}
 		let changeAmount: number;
 		switch (direction) {
-			case Direction.Left:
+			case ScrollDirection.Left:
 				changeAmount = -1;
 				break;
-			case Direction.Right:
+			case ScrollDirection.Right:
 				changeAmount = 1;
 				break;
 			default:
@@ -38,12 +38,15 @@
 	};
 
 	const onCardWheel = (e: WheelEvent): void => {
-		e.deltaY > 0 ? onScrollBtn(Direction.Right) : onScrollBtn(Direction.Left);
+		e.deltaY > 0 ? onScrollBtn(ScrollDirection.Right) : onScrollBtn(ScrollDirection.Left);
 	};
 </script>
 
 <div class="relative">
-	<ScrollButton direction={Direction.Left} on:click={() => onScrollBtn(Direction.Left)} />
+	<ScrollButton
+		direction={ScrollDirection.Left}
+		on:click={() => onScrollBtn(ScrollDirection.Left)}
+	/>
 	<div
 		class="py-8 flex gap-8 overflow-x-auto touch-pan-x my-8 snap-x snap-mandatory"
 		use:scrollableAction
@@ -54,5 +57,8 @@
 		{/each}
 		<CarouselPadding />
 	</div>
-	<ScrollButton direction={Direction.Right} on:click={() => onScrollBtn(Direction.Right)} />
+	<ScrollButton
+		direction={ScrollDirection.Right}
+		on:click={() => onScrollBtn(ScrollDirection.Right)}
+	/>
 </div>

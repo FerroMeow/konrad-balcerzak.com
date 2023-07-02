@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AppRoute from './types/AppRoute';
+	import AppRoute from './AppRoute';
 	import Hamburger from './Hamburger.svelte';
 	import NavLink from './NavLink.svelte';
 	import { onMount } from 'svelte';

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type AppRoute from './types/AppRoute';
+	import type AppRoute from './AppRoute';
 	export let href: AppRoute | URL = new URL('#');
 	$: isActive = $page.url.pathname === href;
 	$: activeGroupHover = isActive ? '' : 'group-hover:';

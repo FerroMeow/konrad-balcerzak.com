@@ -1,6 +1,6 @@
 <script>
 	import FooterLink from './FooterLink.svelte';
-	import AppRoute from './types/AppRoute';
+	import AppRoute from './navigation/AppRoute';
 </script>
 
 <div class="bg-stone-800 text-stone-300 min-h-[theme(space.32)] p-8 text-center">
