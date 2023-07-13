@@ -7,10 +7,10 @@
 
 <li class="text-stone-700">
 	<Heading level={4} className="text-lg">{@html skillIcon(skill.name)} {skill.name}</Heading>
-	<p class="text-gray-400">Level: {skillLevelName(skill.level)}</p>
+	<p class="text-gray-400 text-sm">Level: {skillLevelName(skill.level)}</p>
 	{#if typeof skill.abilities !== 'undefined'}
-		<p>Abilities:</p>
-		<ul class="px-3">
+		<p class="mt-2">Abilities:</p>
+		<ul>
 			{#each skill.abilities as ability}
 				<li class="text-sm">
 					<i class="fa-solid fa-check text-slate-400" />
