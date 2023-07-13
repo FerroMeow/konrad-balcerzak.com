@@ -9,6 +9,6 @@
 	}
 </script>
 
-<svelte:element this={`h${level}`} class="text-slate-700 font-semibold {className}">
+<svelte:element this={`h${level}`} class="text-slate-700 font-semibold tracking-tight {className}">
 	<slot />
 </svelte:element>

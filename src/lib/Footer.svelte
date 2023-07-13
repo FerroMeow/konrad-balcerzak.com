@@ -12,9 +12,9 @@
 				{/each}
 			</ul>
 		</nav>
-		<div class="h-[2px] bg-slate-600 mt-6 mb-4" />
+		<div class="h-[2px] bg-slate-600 mt-4 mb-4" />
 		<div
-			class="flex flex-col md:flex-row md:gap-6 md:items-end text-center md:text-left text-slate-400"
+			class="flex flex-col md:flex-row md:gap-8 md:items-end text-center md:text-left text-slate-400"
 		>
 			<a href={AppRoute.Homepage.toString()} class="order-1 md:order-none">Konrad Balcerzak</a>
 			<address class="order-1 md:order-none">

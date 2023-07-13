@@ -42,7 +42,7 @@
 			<a href="/">Konrad Balcerzak</a>
 		</h1>
 		<ul
-			class="divide-x divide-slate-500 divide-solid gap-6 absolute right-0 hidden md:flex text-lg"
+			class="divide-x divide-slate-500 divide-solid gap-8 absolute right-0 hidden md:flex text-lg"
 		>
 			{#each appRoutes as appRoute}
 				<li class={routePath === appRoute[0].toString() ? 'border-b text-stone-300' : ''}>
