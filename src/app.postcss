@@ -10,6 +10,40 @@
 	.btn {
 		@apply bg-slate-500 px-4 py-2 w-fit inline-block text-white rounded-md hover:bg-slate-600 motion-safe:transition-all;
 	}
+	.blog-article {
+		& h1 {
+			@apply text-5xl;
+		}
+		& h2 {
+			@apply text-4xl;
+		}
+		& h3 {
+			@apply text-3xl;
+		}
+		& h4 {
+			@apply text-2xl;
+		}
+		& h5 {
+			@apply text-xl;
+		}
+		& h6 {
+			@apply text-lg;
+		}
+		&  {
+		}
+		& ol, ul {
+			@apply list-inside;
+		}
+		& ol {
+			@apply list-decimal;
+		}
+		& ul {
+			@apply list-disc;
+		}
+		& > * + * {
+			@apply mt-4;
+		}
+	}
 }
 @layer utilities {
 	.h-screen-nav {
