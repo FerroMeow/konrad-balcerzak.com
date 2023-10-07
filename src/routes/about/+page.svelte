@@ -6,7 +6,7 @@
 	export let data: PageData;
 </script>
 
-<Heading level={2} className="max-w-3xl px-8 my-12 mx-auto text-4xl md:text-4xl">About</Heading>
+<Heading level={2} className="max-w-3xl px-8 my-12 mx-auto text-4xl">About</Heading>
 
 <div class="px-4">
 	<header class="mx-auto border border-slate-200 rounded-3xl shadow-lg max-w-3xl">
@@ -23,11 +23,13 @@
 				<Heading level={3} className="text-xl">Konrad Balcerzak</Heading>
 				<address class="mt-4">
 					<p>
-						E-mail: <a href="mailto:konrad.balcerzak.work@gmail.com"
-							>konrad.balcerzak.work@gmail.com</a
-						>
+						<i class="fa-regular fa-envelope" />
+						<a href="mailto:konrad.balcerzak.work@gmail.com">konrad.balcerzak.work@gmail.com</a>
 					</p>
-					<p>Address: Mysłowice, 41-400, Poland</p>
+					<p>
+						<i class="fa-solid fa-city" />
+						Mysłowice, Poland
+					</p>
 				</address>
 			</div>
 			<ul class="mt-4 md:mt-0 md:flex md:flex-col md:gap-2">

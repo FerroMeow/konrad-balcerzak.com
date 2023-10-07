@@ -6,7 +6,7 @@
 </script>
 
 <li class="text-stone-700">
-	<Heading level={4} className="text-lg">{@html skillIcon(skill.name)} {skill.name}</Heading>
+	<Heading level={4} className="text-lg">{@html skillIcon(skill)} {skill.name}</Heading>
 	<p class="text-gray-400 text-sm">Level: {skillLevelName(skill.level)}</p>
 	{#if typeof skill.abilities !== 'undefined'}
 		<p class="mt-2">Abilities:</p>

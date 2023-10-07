@@ -5,6 +5,7 @@ export const load = (() => {
         skills: [
             {
                 name: 'WordPress',
+                icon: 'wordpress',
                 level: SkillLevel.Advanced,
                 abilities: [
                     'Plugin develompment',
@@ -14,6 +15,7 @@ export const load = (() => {
             },
             {
                 name: 'PHP',
+                icon: 'php',
                 level: SkillLevel.Advanced,
                 abilities: [
                     'Object-oriented programming',
@@ -38,14 +40,17 @@ export const load = (() => {
             },
             {
                 name: 'TypeScript',
+                icon: 'js',
                 level: SkillLevel.Intermediate,
             },
             {
                 name: 'Rust',
+                icon: 'rust',
                 level: SkillLevel.Beginner,
             },
             {
                 name: 'Python',
+                icon: 'python',
                 level: SkillLevel.Beginner,
             }
         ]
