@@ -5,7 +5,7 @@ const config = {
 	theme: {
 		extend: {
 			space: {
-				header: '5rem',
+				header: '8rem',
 			}
 		}
 	},

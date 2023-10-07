@@ -26,11 +26,11 @@
 </script>
 
 <header
-	class="h-[theme(space.header)] top-0 md:sticky w-full p-4 shadow-xl bg-slate-600/80 backdrop-blur-md text-stone-200 z-10"
+	class="h-[theme(space.header)] top-0 md:sticky w-full p-6 xl:p-16 shadow-xl bg-slate-600/80 backdrop-blur-md text-stone-200 z-10"
 	class:max-md:sticky={expanded}
 	class:max-md:static={!expanded}
 >
-	<div class="xl:container h-full mx-auto flex items-center relative">
+	<div class="xl:container h-full mx-auto flex md:items-center relative">
 		<Hamburger
 			className="absolute left-0 md:hidden"
 			on:click={() => {
@@ -38,14 +38,18 @@
 			}}
 			{expanded}
 		/>
-		<h1 class="tracking-wide text-2xl w-fit h-fit mx-auto">
-			<a href="/">Konrad Balcerzak</a>
+		<h1 class="tracking-wide text-4xl w-fit h-fit xl:mx-auto font-mono">
+			<a href="/">&#123; Konrad Balcerzak &#125;</a>
 		</h1>
 		<ul
-			class="divide-x divide-slate-500 divide-solid gap-8 absolute right-0 hidden md:flex text-lg"
+			class="gap-8 self-center right-0 hidden text-3xl font-mono md:flex md:ml-auto 2xl:ml-0 2xl:absolute"
 		>
 			{#each appRoutes as appRoute}
-				<li class={routePath === appRoute[0].toString() ? 'border-b text-stone-300' : ''}>
+				<li
+					class={routePath === appRoute[0].toString()
+						? 'border-b border-b-stone-300 text-stone-300'
+						: ''}
+				>
 					<a href={appRoute[0].toString()}>
 						{appRoute[1]}
 					</a>
