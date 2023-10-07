@@ -5,6 +5,4 @@
 	export let data: PageData;
 </script>
 
-<Article>
-	{@html data.post}
-</Article>
+<Article post={data.post} />

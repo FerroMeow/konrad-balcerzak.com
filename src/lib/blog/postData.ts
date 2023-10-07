@@ -1,4 +1,4 @@
-import { readFile, readdir, stat } from 'node:fs/promises';
+import { readdir, stat } from 'node:fs/promises';
 import { marked } from 'marked';
 import matter from 'gray-matter';
 
@@ -17,10 +17,20 @@ export interface BlogPost {
     content: string;
 }
 
-const MARKED_CONFIG: marked.MarkedOptions = {
-    headerIds: false,
-    mangle: false,
-};
+async function readMarkdownPost(filename: string): Promise<BlogPost> {
+    const parsedMarkdown = matter.read(`static/posts/${filename}`);
+    return {
+        slug: filename.substring(0, filename.lastIndexOf('.md')),
+        title: String(parsedMarkdown.data.title),
+        excerpt: parsedMarkdown.data.excerpt ?? '',
+        thumbnail: parsedMarkdown.data.thumbnail ?? null,
+        content: marked(parsedMarkdown.content, {
+            headerIds: false,
+            mangle: false,
+        }),
+        date: (await stat(`static/posts/${filename}`)).mtime.toString(),
+    }
+}
 
 export async function getPosts(parameters: PostQueryParameters = {}): Promise<BlogPost[]> {
     const dirFiles = await readdir('static/posts');
@@ -32,25 +42,12 @@ export async function getPosts(parameters: PostQueryParameters = {}): Promise<Bl
             parameters.offset ?? 0,
             parameters.limit ?? 6
         )
-        .map(async (file): Promise<BlogPost> => {
-            const parsedMarkdown = matter.read(`static/posts/${file}`);
-            return {
-                slug: file.substring(0, file.lastIndexOf('.md')),
-                title: String(parsedMarkdown.data.title),
-                excerpt: parsedMarkdown.data.excerpt ?? '',
-                thumbnail: parsedMarkdown.data.thumbnail ?? null,
-                content: marked(parsedMarkdown.content),
-                date: (await stat(`static/posts/${file}`)).mtime.toString(),
-            }
-        });
+        .map(readMarkdownPost);
     const blogPosts = await Promise.all(blogPostPromises);
     return blogPosts
         .sort((a, b) => (new Date(a.date)).getMilliseconds() - (new Date(b.date)).getMilliseconds())
 }
 
-export async function getPost(postSlug: string): Promise<string> {
-    return marked(
-        matter((await readFile(`static/posts/${postSlug}.md`)).toString()).content,
-        MARKED_CONFIG
-    );
+export async function getPost(postSlug: string): Promise<BlogPost> {
+    return readMarkdownPost(`${postSlug}.md`);
 }
