@@ -3,6 +3,7 @@ export default interface CardData {
     href: URL;
     description: string;
     imageFilename?: string;
+    colorMode?: 'light' | 'dark'
 }
 
 export type Project = CardData;

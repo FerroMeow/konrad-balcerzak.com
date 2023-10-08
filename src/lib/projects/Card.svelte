@@ -2,20 +2,26 @@
 	import type CardData from '$lib/projects/CardData';
 
 	export let data: CardData;
-	let background = data.imageFilename;
+	let background = data.imageFilename ? `/images/projects/${data.imageFilename}` : '';
+	let textColor = data.colorMode === 'dark' ? 'text-stone-200' : 'text-black';
+	let headingColor = data.colorMode === 'dark' ? 'text-slate-200' : 'text-black';
 </script>
 
 <div
-	style:background-image={background}
-	class="bg-cover flex-shrink-0 w-[min(100%,theme(space.72))] h-[20rem] backdrop-blur-sm backdrop-brightness-50 bg-stone-100 p-8 rounded-3xl shadow-lg flex flex-col justify-end snap-center"
+	class="relative flex-shrink-0 w-[min(100%,theme(space.72))] h-[20rem] snap-center rounded-3xl"
 	on:wheel|preventDefault
 >
-	<h3 class="text-slate-600 font-semibold text-xl">
-		<a href={data.href.toString()}>
-			{data.name}
-		</a>
-	</h3>
-	<p class="text-stone-600">
-		{data.description}
-	</p>
+	<div class="absolute inset-0 bg-cover rounded-3xl" style:background-image="url({background})" />
+	<div
+		class="relative h-full z-10 p-8 rounded-3xl shadow-lg flex flex-col justify-end backdrop-blur-sm backdrop-saturate-50 backdrop-contrast-50 backdrop-brightness-125"
+	>
+		<h3 class="{headingColor} font-semibold text-xl">
+			<a href={data.href.toString()}>
+				{data.name}
+			</a>
+		</h3>
+		<p class={textColor}>
+			{data.description}
+		</p>
+	</div>
 </div>
