@@ -9,13 +9,14 @@
 </script>
 
 <ContentCard title="Contact me">
-	<form>
+	<form method="POST">
 		<fieldset class="md:grid md:grid-cols-2 gap-8">
 			<FormControl
 				id="contact-form-first-name"
 				name="firstName"
 				type={ControlType.Text}
 				placeholder="ex. John"
+				required
 			>
 				First name
 			</FormControl>
@@ -24,6 +25,7 @@
 				name="lastName"
 				type={ControlType.Text}
 				placeholder="ex. Smith"
+				required
 			>
 				Last name
 			</FormControl>
@@ -32,10 +34,11 @@
 				name="email"
 				type={ControlType.Email}
 				placeholder="ex. mail@example.com"
+				required
 			>
 				Your e-mail
 			</FormControl>
-			<FormControl id="contact-form-message" name="message" type={ControlType.Textarea}>
+			<FormControl id="contact-form-message" name="message" type={ControlType.Textarea} required>
 				Message
 			</FormControl>
 			<p class="mt-8"><button type="submit" class="btn w-full">Send</button></p>

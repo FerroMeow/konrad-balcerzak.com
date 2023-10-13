@@ -5,6 +5,7 @@
 	export let id: string;
 	export let type: ControlType;
 	export let placeholder: string = '';
+	export let required: null | true = null;
 	let spanClass = type === ControlType.Textarea ? 'col-span-2' : '';
 </script>
 
@@ -19,6 +20,7 @@
 				rows="6"
 				autocorrect="on"
 				class="w-full resize-none bg-stone-300 placeholder:text-slate-800 p-2 border rounded-md outline-slate-800 focus-visible:outline"
+				{required}
 			/>
 		{:else}
 			<input
@@ -27,6 +29,7 @@
 				{placeholder}
 				{id}
 				class="w-full bg-stone-300 placeholder:text-slate-800 p-2 border rounded-md outline-slate-800 focus-visible:outline"
+				{required}
 			/>
 		{/if}
 	</p>
