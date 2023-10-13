@@ -18,7 +18,7 @@
 				{id}
 				rows="6"
 				autocorrect="on"
-				class="w-full resize-none bg-stone-50 p-2 border rounded-md outline-slate-600 focus-visible:outline"
+				class="w-full resize-none bg-stone-300 placeholder:text-slate-800 p-2 border rounded-md outline-slate-800 focus-visible:outline"
 			/>
 		{:else}
 			<input
@@ -26,7 +26,7 @@
 				{name}
 				{placeholder}
 				{id}
-				class="w-full bg-stone-50 p-2 border rounded-md outline-slate-600 focus-visible:outline"
+				class="w-full bg-stone-300 placeholder:text-slate-800 p-2 border rounded-md outline-slate-800 focus-visible:outline"
 			/>
 		{/if}
 	</p>

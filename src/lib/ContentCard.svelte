@@ -2,11 +2,12 @@
 	import Heading from './Heading.svelte';
 	export let title: string = '';
 	export let className: string = '';
+	export let background: string = 'bg-stone-100';
 </script>
 
-<section
-	class="max-w-3xl p-12 border border-slate-200 my-8 mx-auto rounded-3xl shadow-md bg-stone-100 {className}"
->
-	<Heading level={3} className="text-2xl mb-8">{title}</Heading>
-	<slot />
-</section>
+<div class="{background} px-8 py-16">
+	<section class="container mx-auto text-xl {className}">
+		<Heading level={3} className="text-5xl mb-8">{title}</Heading>
+		<slot />
+	</section>
+</div>

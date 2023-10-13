@@ -3,10 +3,10 @@
 	import { AppRoute, appRoutes } from './navigation/AppRoute';
 </script>
 
-<div class="bg-stone-800 text-stone-300 min-h-[theme(space.32)] p-8 text-center">
+<div class="bg-stone-800 md:mt-auto text-stone-300 min-h-[theme(space.32)] p-8 text-center">
 	<footer class="container mx-auto">
 		<nav>
-			<ul class="flex gap-8 text-xl justify-center md:justify-start">
+			<ul class="flex gap-8 text-2xl justify-center md:justify-start">
 				{#each appRoutes as appRoute}
 					<FooterLink href={appRoute[0]}>{appRoute[1]}</FooterLink>
 				{/each}
@@ -14,7 +14,7 @@
 		</nav>
 		<div class="h-[2px] bg-slate-600 mt-4 mb-4" />
 		<div
-			class="flex flex-col md:flex-row md:gap-8 md:items-end text-center md:text-left text-slate-400"
+			class="flex flex-col md:flex-row md:gap-8 md:items-end text-center md:text-left text-slate-400 text-xl"
 		>
 			<a href={AppRoute.Homepage.toString()} class="order-1 md:order-none">Konrad Balcerzak</a>
 			<address class="order-1 md:order-none">
@@ -42,5 +42,7 @@
 	</footer>
 </div>
 <div class="bg-stone-950 p-2 text-center md:text-right text-stone-300">
-	Copyright &copy; Konrad Balcerzak {new Date().getFullYear().toString()}
+	<div class="container mx-auto">
+		Copyright &copy; Konrad Balcerzak {new Date().getFullYear().toString()}
+	</div>
 </div>

@@ -13,7 +13,10 @@
 	Skip to main content
 </a>
 <Navigation />
-<main id="content" class="md:min-h-screen-nav bg-stone-200 flow-root">
+<main
+	id="content"
+	class="md:min-h-screen-nav bg-stone-200 flow-root md:flex flex-col justify-start"
+>
 	<slot />
+	<Footer />
 </main>
-<Footer />

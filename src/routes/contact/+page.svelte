@@ -8,8 +8,8 @@
 	export const actions = {};
 </script>
 
-<ContentCard title="Contact me" className="rounded-none sm:rounded-3xl sm:max-w-xl lg:max-w-3xl">
-	<form class="bg-stone-100">
+<ContentCard title="Contact me">
+	<form>
 		<fieldset class="md:grid md:grid-cols-2 gap-8">
 			<FormControl
 				id="contact-form-first-name"
@@ -38,12 +38,12 @@
 			<FormControl id="contact-form-message" name="message" type={ControlType.Textarea}>
 				Message
 			</FormControl>
+			<p class="mt-8"><button type="submit" class="btn w-full">Send</button></p>
 		</fieldset>
-		<p class="mt-8"><button type="submit" class="btn w-full">Send</button></p>
 	</form>
 </ContentCard>
 
-<ContentCard title="Other contact options">
+<ContentCard title="Other contact options" background="bg-stone-300">
 	<p>
 		You can write a mail to <a href="konrad.balcerzak.work@gmail.com" class="text-slate-600"
 			>konrad.balcerzak.work@gmail.com</a

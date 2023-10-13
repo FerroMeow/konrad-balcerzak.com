@@ -9,5 +9,4 @@
 <Heading level={1} className="py-6 text-4xl">Blog</Heading>
 {#each data.blogPosts as post}
 	<Excerpt {post} />
-	<Excerpt {post} />
 {/each}

@@ -6,52 +6,52 @@
 	export let data: PageData;
 </script>
 
-<Heading level={2} className="max-w-3xl px-8 my-12 mx-auto text-4xl">About</Heading>
-
 <div class="px-4">
-	<header class="mx-auto border border-slate-200 rounded-3xl shadow-lg max-w-3xl">
-		<div
-			class="h-40 p-16 pb-0 rounded-t-3xl bg-gradient-to-l from-pink-500 via-purple-500 to-emerald-500"
-		/>
-		<div class="p-8 pt-12 rounded-b-3xl relative bg-stone-100 md:flex md:justify-between">
-			<img
-				class="absolute -top-32 max-md:left-1/2 -translate-x-1/2 w-40 aspect-square bg-inherit rounded-full border-8 border-stone-200 md:translate-x-0 object-cover"
-				src="/images/personal/face.jpg"
-				alt=""
+	<CardContent title="About" background="bg-stone-300">
+		<header class="mx-auto border border-slate-100 rounded-3xl shadow-lg max-w-3xl text-xl">
+			<div
+				class="h-40 p-16 pb-0 rounded-t-3xl bg-gradient-to-l from-pink-500 via-purple-500 to-emerald-500"
 			/>
-			<div class="">
-				<Heading level={3} className="text-xl">Konrad Balcerzak</Heading>
-				<address class="mt-4">
-					<p>
-						<i class="fa-regular fa-envelope" />
-						<a href="mailto:konrad.balcerzak.work@gmail.com">konrad.balcerzak.work@gmail.com</a>
-					</p>
-					<p>
-						<i class="fa-solid fa-city" />
-						Mysłowice, Poland
-					</p>
-				</address>
+			<div class="p-8 pt-12 rounded-b-3xl relative bg-stone-100 md:flex md:justify-between">
+				<img
+					class="absolute -top-32 max-md:left-1/2 -translate-x-1/2 w-40 aspect-square bg-inherit rounded-full border-8 border-stone-200 md:translate-x-0 object-cover"
+					src="/images/personal/face.jpg"
+					alt=""
+				/>
+				<div class="">
+					<Heading level={3} className="text-3xl">Konrad Balcerzak</Heading>
+					<address class="mt-4">
+						<p>
+							<i class="fa-regular fa-envelope" />
+							<a href="mailto:konrad.balcerzak.work@gmail.com">konrad.balcerzak.work@gmail.com</a>
+						</p>
+						<p>
+							<i class="fa-solid fa-city" />
+							Mysłowice, Poland
+						</p>
+					</address>
+				</div>
+				<ul class="mt-4 md:mt-0 md:flex md:flex-col md:gap-2">
+					<li>
+						<a href="https://us.edu.pl/en/" target="_blank">
+							<i class="fa-solid fa-graduation-cap" /> University: University of Silesia
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/konradBalcerzak/" target="_blank">
+							<i class="fa-brands fa-github" /> GitHub: konradBalcerzak
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/konrad-balcerzak/" target="_blank">
+							<i class="fa-brands fa-linkedin" /> Linkedin
+						</a>
+					</li>
+				</ul>
 			</div>
-			<ul class="mt-4 md:mt-0 md:flex md:flex-col md:gap-2">
-				<li>
-					<a href="https://us.edu.pl/en/" target="_blank">
-						<i class="fa-solid fa-graduation-cap" /> University: University of Silesia
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/konradBalcerzak/" target="_blank">
-						<i class="fa-brands fa-github" /> GitHub: konradBalcerzak
-					</a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com/in/konrad-balcerzak/" target="_blank">
-						<i class="fa-brands fa-linkedin" /> Linkedin
-					</a>
-				</li>
-			</ul>
-		</div>
-	</header>
-	<CardContent title="My journey in code" className="space-y-8">
+		</header>
+	</CardContent>
+	<CardContent title="My journey in code">
 		<p>
 			I started programming when I was 15 years old, when I was still in High School. I learned
 			basics of web development - HTML, CSS, JavaScript, PHP, and SQL. Soon after graduating, I was
@@ -71,7 +71,7 @@
 			TypeScript.
 		</p>
 	</CardContent>
-	<CardContent title="My skills">
+	<CardContent title="My skills" background="bg-stone-200">
 		<SkillGrid skills={data.skills} />
 	</CardContent>
 </div>

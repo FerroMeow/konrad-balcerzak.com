@@ -2,7 +2,7 @@
 </script>
 
 <div class="px-4">
-	<div class="mx-auto my-4 max-w-3xl divide-y-2">
+	<div class="mx-auto max-w-3xl">
 		<slot />
 	</div>
 </div>
