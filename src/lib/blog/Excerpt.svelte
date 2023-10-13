@@ -6,16 +6,16 @@
 	const postDate = new Date(post.date);
 </script>
 
-<article class="border border-slate-200 my-8 rounded-3xl shadow-md bg-stone-100">
+<article class="border-slate-700 py-6">
 	<a href="/blog/{post.slug}">
 		{#if post.thumbnail}
 			<img
 				src="/images/thumbnails/{post.thumbnail}"
 				alt="Thumbnail"
-				class="rounded-t-3xl w-full max-h-64 object-cover object-center"
+				class="w-full max-h-64 object-cover object-center"
 			/>
 		{/if}
-		<div class="py-4 px-12">
+		<div class="pt-4">
 			<p>
 				<time datetime={postDate.toISOString()}>
 					{Intl.DateTimeFormat('en-US').format(postDate)}
