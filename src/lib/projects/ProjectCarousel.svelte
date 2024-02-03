@@ -2,7 +2,6 @@
 	import Card from '$lib/projects/Card.svelte';
 	import type Project from '$lib/projects/CardData';
 	import CarouselPadding from './CarouselPadding.svelte';
-	import { onMount } from 'svelte';
 	import ScrollButton from './ScrollButton.svelte';
 	import { ScrollDirection } from '$lib/types/Direction';
 	import type { Action } from 'svelte/action';
