@@ -6,12 +6,16 @@
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms/client';
 	import { PUBLIC_HCAPTCHA_SITE_KEY } from '$env/static/public';
+	import { onMount } from 'svelte';
 
 	export let data: PageData;
-
 	const { form, constraints, errors, message, enhance } = superForm(data.form);
 
-	let hcaptchaResponse: string = '';
+	onMount(() => {
+		hcaptcha.render('hcaptcha', {
+			sitekey: PUBLIC_HCAPTCHA_SITE_KEY
+		});
+	});
 </script>
 
 {#if $message}
@@ -73,8 +77,7 @@
 				Message
 			</FormControl>
 			<div>
-				<div class="h-captcha" data-sitekey={PUBLIC_HCAPTCHA_SITE_KEY} />
-				<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+				<div id="hcaptcha" />
 			</div>
 			<p><button type="submit" class="btn w-full">Send</button></p>
 		</fieldset>
@@ -83,8 +86,9 @@
 
 <ContentCard title="Other contact options" background="bg-stone-300">
 	<p>
-		You can write a mail to <a href="konrad.balcerzak.work@gmail.com" class="text-slate-600"
-			>konrad.balcerzak.work@gmail.com</a
+		You can write an e-mail directly to <a
+			href="konrad.balcerzak.work@gmail.com"
+			class="text-slate-600">konrad.balcerzak.work@gmail.com</a
 		>
 	</p>
 	<p>

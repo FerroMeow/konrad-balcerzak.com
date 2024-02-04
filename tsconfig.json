@@ -9,7 +9,8 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"noEmitOnError": true
+		"noEmitOnError": true,
+		"typeRoots": ["node_modules/@hcaptcha"]
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
