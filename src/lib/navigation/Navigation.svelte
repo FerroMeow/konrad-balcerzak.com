@@ -36,7 +36,6 @@
 			on:click={() => {
 				expanded = !expanded;
 			}}
-			{expanded}
 		/>
 		<h1 class="tracking-wide text-4xl w-fit h-fit xl:mx-auto font-mono">
 			<a href="/">&#123; Konrad Balcerzak &#125;</a>

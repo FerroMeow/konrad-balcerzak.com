@@ -1,5 +1,4 @@
 <script lang="ts">
-	export let expanded: boolean;
 	export let className: string | null = null;
 </script>
 
