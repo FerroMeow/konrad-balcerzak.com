@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@types/marked':
-    specifier: ^5.0.2
-    version: 5.0.2
+  dotenv:
+    specifier: ^16.4.1
+    version: 16.4.1
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
@@ -25,6 +25,9 @@ devDependencies:
   '@sveltejs/kit':
     specifier: ^1.30.3
     version: 1.30.3(svelte@4.2.9)(vite@4.5.2)
+  '@types/marked':
+    specifier: ^5.0.2
+    version: 5.0.2
   '@types/nodemailer':
     specifier: ^6.4.14
     version: 6.4.14
@@ -566,7 +569,7 @@ packages:
 
   /@types/marked@5.0.2:
     resolution: {integrity: sha512-OucS4KMHhFzhz27KxmWg7J+kIYqyqoW5kdIEI319hqARQQUTqhao3M/F+uFnDXD0Rg72iDDZxZNxq5gvctmLlg==}
-    dev: false
+    dev: true
 
   /@types/node@20.11.16:
     resolution: {integrity: sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ==}
@@ -1113,6 +1116,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv@16.4.1:
+    resolution: {integrity: sha512-CjA3y+Dr3FyFDOAMnxZEGtnW9KBR2M0JvvUtXNW+dYJL5ROWxP9DUHCwgFqpMk0OXCc0ljhaNTr2w/kutYIcHQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
