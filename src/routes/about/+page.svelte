@@ -3,6 +3,7 @@
 	import Heading from '$lib/Heading.svelte';
 	import SkillGrid from '$lib/skills/SkillGrid.svelte';
 	import type { PageData } from './$types';
+	import face from '$lib/assets/images/personal/face.jpg';
 	export let data: PageData;
 </script>
 
@@ -14,7 +15,7 @@
 		<div class="p-8 pt-12 rounded-b-3xl relative bg-stone-100 md:flex md:justify-between">
 			<img
 				class="absolute -top-32 max-md:left-1/2 -translate-x-1/2 w-40 aspect-square bg-inherit rounded-full border-8 border-stone-200 md:translate-x-0 object-cover"
-				src="/images/personal/face.jpg"
+				src={face}
 				alt=""
 			/>
 			<div class="">

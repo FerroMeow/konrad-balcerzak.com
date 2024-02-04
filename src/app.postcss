@@ -10,6 +10,9 @@
 	.btn {
 		@apply bg-slate-500 px-4 py-2 w-fit inline-block text-white rounded-md hover:bg-slate-600 motion-safe:transition-all;
 	}
+	.bg-image {
+		background-image: var(--bg-mobile);
+	}
 	.blog-article {
 		@apply text-lg;
 		& h1 {
@@ -30,9 +33,10 @@
 		& h6 {
 			@apply text-lg;
 		}
-		&  {
+		& {
 		}
-		& ol, ul {
+		& ol,
+		ul {
 			@apply list-inside;
 		}
 		& ol {
@@ -43,6 +47,11 @@
 		}
 		& > * + * {
 			@apply mt-4;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		.bg-image {
+			background-image: var(--bg-desktop);
 		}
 	}
 }

@@ -2,10 +2,17 @@
 	import Heading from '$lib/Heading.svelte';
 	import ProjectCarousel from '$lib/projects/ProjectCarousel.svelte';
 	import type { PageData } from './$types';
+	import desktopBg from '$lib/assets/images/bg/pexels-picjumbocom-196659.jpg?url';
+	import mobileBg from '$lib/assets/images/bg/pexels-robin-schreiner-2438212.jpg?url';
 	export let data: PageData;
 </script>
 
-<header class="text-center h-screen-nav flex flex-col justify-center">
+<header class="relative text-center h-screen-nav flex flex-col justify-center z-10">
+	<div
+		class="absolute inset-0 bg-image bg-cover bg-center -z-10"
+		style:--bg-mobile={'url("' + mobileBg + '")'}
+		style:--bg-desktop={'url("' + desktopBg + '")'}
+	/>
 	<Heading level={1} className="text-4xl md:text-7xl">Konrad Balcerzak</Heading>
 	<p class="text-lg md:text-4xl mt-4 md:mt-8 text-stone-700">A professional web developer</p>
 	<a href="/about" class="btn mx-auto mt-8 text-lg p-4">Find out more</a>
