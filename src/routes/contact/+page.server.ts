@@ -37,9 +37,9 @@ const contactForm = z.object({
 	})
 });
 
-export const load: PageLoad = () => {
+export const load: PageLoad = async () => {
 	return {
-		form: superValidate(contactForm)
+		form: await superValidate(contactForm)
 	};
 };
 
